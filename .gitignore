@@ -1,0 +1,4 @@
+*.javac
+*.sublime-project
+*.sublime-workspace
+.hg
