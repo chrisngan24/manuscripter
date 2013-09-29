@@ -1,14 +1,22 @@
 .verse-output {
   margin: 1.5em;
+  text-align: justify;
 }
 #error_message {
   margin: 1em;
+}
+#passage_form {
+  text-align: center;
 }
 body {
   font-family: "Segoe UI Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: url("../img/ricepaper_v3.png");
 }
+.title {
+  text-align: center;
+}
 .btn {
+  margin-top: 1em;
   font-family: "Segoe UI Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* Portrait tablet to landscape and desktop */

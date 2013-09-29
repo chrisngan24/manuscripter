@@ -45,6 +45,7 @@ define([
 					var parsed = jsonObjects[i].text.replace(/<[^>]*>/g,'');					
 					text+= parsed + " ";
 				}
+				$('.verse-output').addClass('hero-unit');
 				$('#passage_output').empty();
 				$('#passage_output').html(text);
 
