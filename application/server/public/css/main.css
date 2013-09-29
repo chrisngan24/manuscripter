@@ -1,0 +1,15 @@
+.verse-output {
+  margin: 1.5em;
+}
+#error_message {
+  margin: 1em;
+}
+body {
+  font-family: "Segoe UI Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: url("../img/ricepaper_v3.png");
+}
+.btn {
+  font-family: "Segoe UI Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* Portrait tablet to landscape and desktop */
+/* Landscape phone to portrait tablet */

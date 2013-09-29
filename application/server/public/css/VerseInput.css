@@ -3,6 +3,10 @@
     
 }
 
+body{
+	font-family: "Segoe UI Light", Helvetica, Arial, Tahoma;
+}
+
 #error_message{
 	margin:1em;
 }
