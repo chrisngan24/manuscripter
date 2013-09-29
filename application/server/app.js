@@ -39,7 +39,7 @@ app.get('/api/verse*', function (request, response){
   // console.log(response.body);
   var query = request.query;
   var reqPath = '/api/?passage=' + 
-        query.book.replace(' ', '%20') + 
+        query.book.split(' ').join('%20') + 
         '%20' + 
         query.chapter + 
         ':' + 

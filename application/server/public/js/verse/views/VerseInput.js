@@ -9,6 +9,7 @@ define([
 		return Backbone.View.extend({
 			initialize : function(options){
 				this.template = _.template(VerseInputTemplate);
+				_.bindAll(this);
 				this.context = options.context;
 				return this;
 			},
@@ -39,13 +40,31 @@ define([
 
 			getPassageSuccess : function (response) {
 				
-				jsonObjects = JSON.parse(response);
+				var jsonObjects = JSON.parse(response);
+				console.log(jsonObjects);
+				debugger;
 				var text = '';
+				var book ='',
+					chapter = '',
+					verse = '';
+
 				for(var i = 0; i < jsonObjects.length; i++){
+					var object = jsonObjects[i];
 					var parsed = jsonObjects[i].text.replace(/<[^>]*>/g,'');					
+					if(i ==0){
+						book = object.bookname;
+						verse += object.verse;
+						chapter = object.chapter;
+					}
+					else if (i == jsonObjects.length-1){
+						verse += '-' + object.verse;
+					}
 					text+= parsed + " ";
+
 				}
 				$('.verse-output').addClass('hero-unit');
+				var passage = this.model;
+				$('#verse_passage').text(book +' ' + chapter +':' + verse);
 				$('#passage_output').empty();
 				$('#passage_output').html(text);
 

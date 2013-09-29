@@ -8,6 +8,14 @@
 #passage_form {
   text-align: center;
 }
+@media print {
+  #passage_form {
+    display: none;
+  }
+  #app_title {
+    display: none;
+  }
+}
 body {
   font-family: "Segoe UI Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: url("../img/ricepaper_v3.png");
